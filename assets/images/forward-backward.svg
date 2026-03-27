@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="340" viewBox="0 0 720 340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="340" viewBox="0 0 720 340" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">
   <defs>
     <marker id="af" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
       <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
@@ -14,12 +14,10 @@
   <rect width="720" height="340" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
   <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Forward Pass vs Backward Pass</text>
 
-  <!-- FORWARD PASS (top) -->
   <rect x="30" y="48" width="660" height="120" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
   <text x="56" y="70" font-size="12" font-weight="700" fill="#1d4ed8">FORWARD PASS</text>
   <text x="180" y="70" font-size="11" fill="#64748b">(make a prediction)</text>
 
-  <!-- Forward boxes -->
   <rect x="60" y="88" width="100" height="55" rx="8" fill="white" stroke="#93c5fd" stroke-width="1.5" filter="url(#s3)"/>
   <text x="110" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">Input</text>
   <text x="110" y="128" text-anchor="middle" font-size="10" fill="#64748b">[0.5, 0.8, 0.2]</text>
@@ -28,7 +26,7 @@
 
   <rect x="200" y="88" width="110" height="55" rx="8" fill="white" stroke="#93c5fd" stroke-width="1.5" filter="url(#s3)"/>
   <text x="255" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">Hidden Layer</text>
-  <text x="255" y="128" text-anchor="middle" font-size="10" fill="#64748b">weights × inputs</text>
+  <text x="255" y="128" text-anchor="middle" font-size="10" fill="#64748b">weights x inputs</text>
 
   <line x1="310" y1="115" x2="345" y2="115" stroke="#2563eb" stroke-width="2" marker-end="url(#af)"/>
 
@@ -42,12 +40,10 @@
   <text x="555" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">Loss</text>
   <text x="555" y="128" text-anchor="middle" font-size="10" fill="#64748b">how wrong? 0.27</text>
 
-  <!-- BACKWARD PASS (bottom) -->
   <rect x="30" y="185" width="660" height="120" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
   <text x="56" y="207" font-size="12" font-weight="700" fill="#dc2626">BACKWARD PASS</text>
   <text x="195" y="207" font-size="11" fill="#64748b">(learn from mistakes)</text>
 
-  <!-- Backward boxes -->
   <rect x="500" y="225" width="110" height="55" rx="8" fill="white" stroke="#fca5a5" stroke-width="1.5" filter="url(#s3)"/>
   <text x="555" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">Loss = 0.27</text>
   <text x="555" y="265" text-anchor="middle" font-size="10" fill="#64748b">start here</text>
@@ -55,13 +51,13 @@
   <line x1="500" y1="252" x2="465" y2="252" stroke="#ef4444" stroke-width="2" marker-end="url(#ab)"/>
 
   <rect x="350" y="225" width="110" height="55" rx="8" fill="white" stroke="#fca5a5" stroke-width="1.5" filter="url(#s3)"/>
-  <text x="405" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">L/output</text>
+  <text x="405" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">dL/d(output)</text>
   <text x="405" y="265" text-anchor="middle" font-size="10" fill="#64748b">blame output</text>
 
   <line x1="350" y1="252" x2="315" y2="252" stroke="#ef4444" stroke-width="2" marker-end="url(#ab)"/>
 
   <rect x="200" y="225" width="110" height="55" rx="8" fill="white" stroke="#fca5a5" stroke-width="1.5" filter="url(#s3)"/>
-  <text x="255" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">L/weights</text>
+  <text x="255" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">dL/d(weights)</text>
   <text x="255" y="265" text-anchor="middle" font-size="10" fill="#64748b">blame weights</text>
 
   <line x1="200" y1="252" x2="165" y2="252" stroke="#ef4444" stroke-width="2" marker-end="url(#ab)"/>
@@ -70,6 +66,5 @@
   <text x="110" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#166534">Update!</text>
   <text x="110" y="265" text-anchor="middle" font-size="10" fill="#64748b">adjust weights</text>
 
-  <!-- Summary -->
-  <text x="360" y="328" text-anchor="middle" font-size="11" fill="#64748b">Forward pass makes a guess. Backward pass figures out who's to blame and fixes the weights.</text>
+  <text x="360" y="328" text-anchor="middle" font-size="11" fill="#64748b">Forward pass makes a guess. Backward pass figures out who is to blame and fixes the weights.</text>
 </svg>

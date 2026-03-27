@@ -1,58 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">
   <rect width="720" height="280" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
   <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Activation Functions: Adding Non-Linearity</text>
 
-  <!-- Sigmoid -->
   <g transform="translate(40, 50)">
     <rect width="200" height="200" rx="12" fill="white" stroke="#e2e8f0" stroke-width="1"/>
     <text x="100" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="#7c3aed">Sigmoid</text>
-    <text x="100" y="42" text-anchor="middle" font-size="10" fill="#94a3b8">squashes to 01</text>
-
-    <!-- Axes -->
+    <text x="100" y="42" text-anchor="middle" font-size="10" fill="#94a3b8">squashes to 0 - 1</text>
     <line x1="30" y1="130" x2="175" y2="130" stroke="#cbd5e1" stroke-width="1"/>
     <line x1="100" y1="60" x2="100" y2="185" stroke="#cbd5e1" stroke-width="1"/>
     <text x="178" y="134" font-size="9" fill="#94a3b8">x</text>
     <text x="105" y="65" font-size="9" fill="#94a3b8">1</text>
     <text x="105" y="190" font-size="9" fill="#94a3b8">0</text>
-
-    <!-- Sigmoid curve -->
     <path d="M 30,175 C 50,175 60,172 70,165 C 80,155 90,140 100,130 C 110,120 120,105 130,95 C 140,88 150,85 175,82" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 
-  <!-- ReLU -->
   <g transform="translate(260, 50)">
     <rect width="200" height="200" rx="12" fill="white" stroke="#e2e8f0" stroke-width="1"/>
     <text x="100" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">ReLU</text>
-    <text x="100" y="42" text-anchor="middle" font-size="10" fill="#94a3b8">if negative ’ 0, else keep</text>
-
-    <!-- Axes -->
+    <text x="100" y="42" text-anchor="middle" font-size="10" fill="#94a3b8">if negative = 0, else keep</text>
     <line x1="30" y1="140" x2="175" y2="140" stroke="#cbd5e1" stroke-width="1"/>
     <line x1="100" y1="60" x2="100" y2="185" stroke="#cbd5e1" stroke-width="1"/>
     <text x="178" y="144" font-size="9" fill="#94a3b8">x</text>
     <text x="105" y="190" font-size="9" fill="#94a3b8">0</text>
-
-    <!-- ReLU line -->
     <line x1="30" y1="140" x2="100" y2="140" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
     <line x1="100" y1="140" x2="175" y2="70" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 
-  <!-- Tanh -->
   <g transform="translate(480, 50)">
     <rect width="200" height="200" rx="12" fill="white" stroke="#e2e8f0" stroke-width="1"/>
     <text x="100" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">Tanh</text>
     <text x="100" y="42" text-anchor="middle" font-size="10" fill="#94a3b8">squashes to -1 to +1</text>
-
-    <!-- Axes -->
     <line x1="30" y1="130" x2="175" y2="130" stroke="#cbd5e1" stroke-width="1"/>
     <line x1="100" y1="60" x2="100" y2="195" stroke="#cbd5e1" stroke-width="1"/>
     <text x="178" y="134" font-size="9" fill="#94a3b8">x</text>
     <text x="105" y="65" font-size="9" fill="#94a3b8">+1</text>
     <text x="105" y="200" font-size="9" fill="#94a3b8">-1</text>
-
-    <!-- Tanh curve -->
     <path d="M 30,185 C 45,183 55,180 65,175 C 75,165 85,150 100,130 C 115,110 125,95 135,85 C 145,78 155,76 175,74" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 
-  <!-- Bottom note -->
   <text x="360" y="270" text-anchor="middle" font-size="11" fill="#64748b">Without activation functions, stacking layers would be no better than a single layer (just linear math).</text>
 </svg>
