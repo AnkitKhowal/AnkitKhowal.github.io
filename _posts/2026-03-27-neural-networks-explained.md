@@ -57,39 +57,87 @@ The "neural" name comes from a loose analogy to the brain. The network is made o
 
 ## The Building Block: A Single Neuron
 
-Remember the puzzle? You found Y = 2X + 1. A single neuron does something similar -- it takes inputs, multiplies each by a **weight**, adds a **bias**, and produces an output.
+Let's go back to the house price problem. You know three things about a house: **square footage** (1,500), **bedrooms** (3), and **age** (10 years). You need to predict the price. How would *you* do it?
 
-![A single neuron with inputs, weights, bias, and activation](/assets/images/single-neuron.svg)
+### You'd play a guessing game
 
-Here's what happens inside one neuron:
+Imagine you have no formula. You'd probably try something like this:
 
-1. **Inputs arrive** -- numbers from the outside world (pixel values, house features, etc.)
-2. **Each input gets multiplied by a weight** -- the weight is how important that input is. High weight = "pay attention." Negative weight = "this pushes the answer down."
-3. **Add them all up, plus a bias** -- the bias shifts the answer up or down regardless of inputs (like the "+1" in Y = 2X + 1)
-4. **Pass through an activation function** -- this decides if the neuron "fires" or stays quiet (explained below)
-5. **Output** -- one number, passed to the next layer
+**Attempt 1** — "Maybe I'll just multiply square footage by 1."
 
-**The key insight**: the weights and bias are the things the network *learns*. In Y = 2X + 1, it would learn that the weight is 2 and the bias is 1. Training is just finding the right weights.
+> 1,500 x 1 = **$1,500k** ... way too high.
+
+**Attempt 2** — "OK, let me try a smaller multiplier, like 0.1."
+
+> 1,500 x 0.1 = **$150k** ... too low, and I'm ignoring bedrooms and age entirely.
+
+**Attempt 3** — "Let me give each feature its own multiplier and see what happens."
+
+> (1,500 x 0.2) + (3 x 50) + (10 x -2.0) = 300 + 150 - 20 = **$430k** ... getting closer!
+
+Notice what you're doing — you're **trying different multipliers**, checking if the answer looks right, and adjusting. That's *exactly* what a neural network does. Those multipliers? They're called **weights**.
+
+### So what are weights?
+
+A **weight** is just a number that says *"how much does this feature matter?"*
+
+| Feature | Value | Weight you tried | What the weight means |
+|---------|-------|-------------------|----------------------|
+| Sq. footage | 1,500 | 0.2 | Bigger house = higher price |
+| Bedrooms | 3 | 50.0 | More rooms add a lot of value |
+| Age | 10 | **-2.0** | Negative! Older = *cheaper* |
+
+A **positive weight** means "more of this pushes the price up." A **negative weight** means "more of this pulls the price down." A weight near zero means "this feature barely matters."
+
+### And what's a bias?
+
+After attempt 3 you got $430k, but the real price is $480k. You're off by $50k. So you think: *"Every house has some base value just for existing — land, permits, whatever. Let me add a flat $50k to every prediction."*
+
+> 430 + 50 = **$480k** ... nailed it!
+
+That flat number you added is the **bias**. It shifts *every* prediction up or down, no matter what the inputs are. Remember Y = 2X + **1** from the puzzle? That "+1" was a bias too.
+
+### One last twist: the activation function
+
+Sometimes the raw number doesn't make sense — like a negative house price. An **activation function** cleans up the output. For example, "if the result is negative, just make it zero." (We'll explain activation functions in detail below.)
+
+### Putting it all together
+
+A single neuron does exactly what you just did:
+
+1. **Take the inputs** (sq. footage, bedrooms, age)
+2. **Multiply each by a weight** (the multipliers you guessed)
+3. **Add everything up, plus a bias** (the flat adjustment)
+4. **Pass through an activation function** (clean up the result)
+5. **Output a prediction** ($480k)
+
+![A single neuron predicting house price from square footage, bedrooms, and age](/assets/images/single-neuron.svg)
+
+### The only difference between you and a neural network?
+
+You tried 3 attempts by hand. A neural network does this **millions of times**, automatically, adjusting the weights and bias a tiny bit each time until the predictions match reality. That automatic process of trying, checking, and adjusting is called **training** — and we'll get to how it works soon.
+
+**Key takeaway**: weights and bias aren't magic. They're just numbers found through trial and error. A neuron is just **multiply, add, shift** — the same guessing game you just played.
 
 ---
 
 ## Layers: Stacking Neurons Together
 
-One neuron can learn `Y = 2X + 1`. But it can't learn to tell a cat from a dog, or translate English to French. For that, you need many neurons organized in layers.
+One neuron gave us a decent house price guess. But think about it — does square footage affect price the same way in downtown Manhattan vs. rural Nebraska? Probably not. That single neuron can only learn one straight-line relationship. Real-world problems are full of *"it depends"* logic that a single neuron can't capture.
+
+The solution: **stack many neurons into layers**, each one picking up a different nuance.
 
 ![Neural network with input, hidden, and output layers](/assets/images/neural-network-layers.svg)
 
-| Layer | What it does | Example |
+| Layer | What it does | House price example |
 |-------|-------------|---------|
-| **Input layer** | Receives the raw data | Pixel values, house features |
-| **Hidden layers** | Discovers intermediate patterns | Edges, shapes, price factors |
-| **Output layer** | Produces the final answer | "cat" at 92% confidence, or $450,000 |
+| **Input layer** | Receives the raw features | sq. footage, bedrooms, age, zip code... |
+| **Hidden layers** | Discovers intermediate patterns | "large AND new = luxury", "small but urban = still pricey" |
+| **Output layer** | Produces the final answer | Predicted price: $480,000 |
 
 Every neuron in one layer connects to every neuron in the next. Data flows **left to right**.
 
-**Why "hidden"?** You never directly see what these layers learn. The first hidden layer might detect edges in an image. The second combines edges into shapes. The third recognizes shapes as ears, eyes, or noses. Nobody programs this -- it emerges from training.
-
-Think of it like the house price problem: the first layer might learn "bigger houses cost more." The second might learn "but only if they're in a good neighborhood." The third might learn "unless the building is very old." Each layer captures a more nuanced relationship.
+**Why "hidden"?** You never directly tell these layers what to learn. The first hidden layer might discover "bigger houses cost more." The second might figure out "but only if they're in a good neighborhood." The third might learn "unless the building is very old." Nobody programs these rules — they emerge from seeing thousands of examples during training. Each layer captures a more nuanced *"it depends."*
 
 ---
 
