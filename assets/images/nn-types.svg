@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <filter id="s6" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="720" height="280" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Types of Neural Networks</text>
+
+  <!-- FFN -->
+  <g transform="translate(30, 50)">
+    <rect width="200" height="200" rx="12" fill="white" stroke="#8b5cf6" stroke-width="2" filter="url(#s6)"/>
+    <text x="100" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#5b21b6">Feed-Forward (FFN)</text>
+    <text x="100" y="48" text-anchor="middle" font-size="10" fill="#7c3aed">simple, one-direction</text>
+
+    <!-- Simple 3 layer network -->
+    <g transform="translate(30, 60)">
+      <circle cx="25" cy="25" r="10" fill="#c4b5fd" stroke="#8b5cf6" stroke-width="1.5"/>
+      <circle cx="25" cy="60" r="10" fill="#c4b5fd" stroke="#8b5cf6" stroke-width="1.5"/>
+      <circle cx="25" cy="95" r="10" fill="#c4b5fd" stroke="#8b5cf6" stroke-width="1.5"/>
+      <circle cx="75" cy="35" r="10" fill="#93c5fd" stroke="#3b82f6" stroke-width="1.5"/>
+      <circle cx="75" cy="75" r="10" fill="#93c5fd" stroke="#3b82f6" stroke-width="1.5"/>
+      <circle cx="125" cy="55" r="10" fill="#6ee7b7" stroke="#10b981" stroke-width="1.5"/>
+      <line x1="35" y1="25" x2="65" y2="35" stroke="#cbd5e1" stroke-width="1"/>
+      <line x1="35" y1="25" x2="65" y2="75" stroke="#cbd5e1" stroke-width="1"/>
+      <line x1="35" y1="60" x2="65" y2="35" stroke="#cbd5e1" stroke-width="1"/>
+      <line x1="35" y1="60" x2="65" y2="75" stroke="#cbd5e1" stroke-width="1"/>
+      <line x1="35" y1="95" x2="65" y2="35" stroke="#cbd5e1" stroke-width="1"/>
+      <line x1="35" y1="95" x2="65" y2="75" stroke="#cbd5e1" stroke-width="1"/>
+      <line x1="85" y1="35" x2="115" y2="55" stroke="#cbd5e1" stroke-width="1"/>
+      <line x1="85" y1="75" x2="115" y2="55" stroke="#cbd5e1" stroke-width="1"/>
+    </g>
+    <text x="100" y="185" text-anchor="middle" font-size="10" fill="#64748b">tabular data, classification</text>
+  </g>
+
+  <!-- CNN -->
+  <g transform="translate(260, 50)">
+    <rect width="200" height="200" rx="12" fill="white" stroke="#2563eb" stroke-width="2" filter="url(#s6)"/>
+    <text x="100" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">CNN</text>
+    <text x="100" y="48" text-anchor="middle" font-size="10" fill="#2563eb">sees patterns in images</text>
+
+    <!-- Grid representing image + filters -->
+    <g transform="translate(25, 60)">
+      <!-- Image grid -->
+      <rect x="0" y="0" width="60" height="60" rx="4" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+      <line x1="20" y1="0" x2="20" y2="60" stroke="#93c5fd" stroke-width="0.5"/>
+      <line x1="40" y1="0" x2="40" y2="60" stroke="#93c5fd" stroke-width="0.5"/>
+      <line x1="0" y1="20" x2="60" y2="20" stroke="#93c5fd" stroke-width="0.5"/>
+      <line x1="0" y1="40" x2="60" y2="40" stroke="#93c5fd" stroke-width="0.5"/>
+      <text x="30" y="35" text-anchor="middle" font-size="9" fill="#1d4ed8">image</text>
+
+      <!-- Arrow -->
+      <text x="73" y="33" font-size="14" fill="#3b82f6">’</text>
+
+      <!-- Filter/kernel -->
+      <rect x="85" y="10" width="30" height="30" rx="3" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="100" y="30" text-anchor="middle" font-size="8" font-weight="600" fill="#1e40af">filter</text>
+      <text x="100" y="55" text-anchor="middle" font-size="8" fill="#3b82f6">slides across</text>
+
+      <!-- Arrow -->
+      <text x="125" y="28" font-size="14" fill="#3b82f6">’</text>
+
+      <!-- Feature map -->
+      <rect x="135" y="5" width="20" height="45" rx="3" fill="#60a5fa" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="145" y="32" text-anchor="middle" font-size="7" fill="white" font-weight="600">feat</text>
+    </g>
+    <text x="100" y="175" text-anchor="middle" font-size="10" fill="#64748b">image recognition,</text>
+    <text x="100" y="190" text-anchor="middle" font-size="10" fill="#64748b">object detection</text>
+  </g>
+
+  <!-- Transformer -->
+  <g transform="translate(490, 50)">
+    <rect width="200" height="200" rx="12" fill="white" stroke="#059669" stroke-width="2" filter="url(#s6)"/>
+    <text x="100" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#047857">Transformer</text>
+    <text x="100" y="48" text-anchor="middle" font-size="10" fill="#059669">attention over sequences</text>
+
+    <!-- Token blocks with attention arcs -->
+    <g transform="translate(20, 65)">
+      <rect x="0" y="30" width="30" height="25" rx="4" fill="#d1fae5" stroke="#34d399" stroke-width="1.5"/>
+      <text x="15" y="47" text-anchor="middle" font-size="8" font-weight="600" fill="#064e3b">The</text>
+
+      <rect x="40" y="30" width="30" height="25" rx="4" fill="#d1fae5" stroke="#34d399" stroke-width="1.5"/>
+      <text x="55" y="47" text-anchor="middle" font-size="8" font-weight="600" fill="#064e3b">cat</text>
+
+      <rect x="80" y="30" width="30" height="25" rx="4" fill="#a7f3d0" stroke="#10b981" stroke-width="2"/>
+      <text x="95" y="47" text-anchor="middle" font-size="8" font-weight="600" fill="#064e3b">sat</text>
+
+      <rect x="120" y="30" width="30" height="25" rx="4" fill="#d1fae5" stroke="#34d399" stroke-width="1.5"/>
+      <text x="135" y="47" text-anchor="middle" font-size="8" font-weight="600" fill="#064e3b">on</text>
+
+      <!-- Attention arcs -->
+      <path d="M 95,30 C 95,10 55,10 55,30" fill="none" stroke="#10b981" stroke-width="2" opacity="0.8"/>
+      <path d="M 95,30 C 95,18 15,18 15,30" fill="none" stroke="#10b981" stroke-width="1" opacity="0.4"/>
+      <path d="M 95,30 C 95,2 135,2 135,30" fill="none" stroke="#10b981" stroke-width="0.8" opacity="0.3"/>
+
+      <text x="75" y="5" text-anchor="middle" font-size="8" fill="#059669">attention</text>
+      <text x="80" y="80" text-anchor="middle" font-size="9" fill="#64748b">each word looks at</text>
+      <text x="80" y="93" text-anchor="middle" font-size="9" fill="#64748b">every other word</text>
+    </g>
+    <text x="100" y="190" text-anchor="middle" font-size="10" fill="#64748b">ChatGPT, translation</text>
+  </g>
+
+  <!-- Bottom labels -->
+  <text x="360" y="272" text-anchor="middle" font-size="11" fill="#64748b">Different architectures are suited for different types of data.</text>
+</svg>

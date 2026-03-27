@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="neuronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    <linearGradient id="outGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="700" height="320" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="350" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">A Single Neuron</text>
+
+  <!-- Input labels -->
+  <text x="55" y="100" text-anchor="middle" font-size="13" fill="#64748b">xÅ</text>
+  <text x="55" y="170" text-anchor="middle" font-size="13" fill="#64748b">xÇ</text>
+  <text x="55" y="240" text-anchor="middle" font-size="13" fill="#64748b">xÉ</text>
+
+  <!-- Input circles -->
+  <circle cx="95" cy="95" r="20" fill="#e0e7ff" stroke="#818cf8" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="95" cy="165" r="20" fill="#e0e7ff" stroke="#818cf8" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="95" cy="235" r="20" fill="#e0e7ff" stroke="#818cf8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="95" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#4338ca">0.5</text>
+  <text x="95" y="170" text-anchor="middle" font-size="11" font-weight="600" fill="#4338ca">0.8</text>
+  <text x="95" y="240" text-anchor="middle" font-size="11" font-weight="600" fill="#4338ca">0.2</text>
+
+  <!-- Connection lines with weights -->
+  <line x1="115" y1="95" x2="290" y2="165" stroke="#94a3b8" stroke-width="2.5" opacity="0.7"/>
+  <line x1="115" y1="165" x2="290" y2="165" stroke="#94a3b8" stroke-width="2.5" opacity="0.7"/>
+  <line x1="115" y1="235" x2="290" y2="165" stroke="#94a3b8" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Weight labels -->
+  <rect x="170" y="110" width="40" height="20" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="190" y="124" text-anchor="middle" font-size="10" font-weight="600" fill="#92400e">wÅ=0.7</text>
+
+  <rect x="170" y="148" width="40" height="20" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="190" y="162" text-anchor="middle" font-size="10" font-weight="600" fill="#92400e">wÇ=0.3</text>
+
+  <rect x="170" y="195" width="43" height="20" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="191" y="209" text-anchor="middle" font-size="10" font-weight="600" fill="#92400e">wÉ=-0.1</text>
+
+  <!-- Main neuron -->
+  <circle cx="330" cy="165" r="40" fill="url(#neuronGrad)" filter="url(#shadow)"/>
+  <text x="330" y="158" text-anchor="middle" font-size="10" fill="white" font-weight="600">£ + b</text>
+  <text x="330" y="178" text-anchor="middle" font-size="10" fill="#c7d2fe">then f(x)</text>
+
+  <!-- Arrow to activation -->
+  <line x1="370" y1="165" x2="440" y2="165" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+  <defs>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Activation function box -->
+  <rect x="445" y="140" width="90" height="50" rx="10" fill="#ecfdf5" stroke="#34d399" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="162" text-anchor="middle" font-size="11" font-weight="600" fill="#065f46">Activation</text>
+  <text x="490" y="178" text-anchor="middle" font-size="10" fill="#047857">ReLU / Sigmoid</text>
+
+  <!-- Arrow to output -->
+  <line x1="535" y1="165" x2="585" y2="165" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Output -->
+  <circle cx="615" cy="165" r="25" fill="url(#outGrad)" filter="url(#shadow)"/>
+  <text x="615" y="170" text-anchor="middle" font-size="12" font-weight="700" fill="white">0.73</text>
+  <text x="615" y="210" text-anchor="middle" font-size="12" fill="#64748b">output</text>
+
+  <!-- Bias label -->
+  <line x1="330" y1="230" x2="330" y2="210" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="305" y="232" width="50" height="22" rx="4" fill="#fce7f3" stroke="#f472b6" stroke-width="1"/>
+  <text x="330" y="247" text-anchor="middle" font-size="10" font-weight="600" fill="#9d174d">b = 0.1</text>
+
+  <!-- Legend -->
+  <rect x="20" y="278" width="660" height="30" rx="6" fill="#f1f5f9"/>
+  <circle cx="50" cy="293" r="6" fill="#e0e7ff" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="62" y="297" font-size="10" fill="#475569">Inputs</text>
+  <rect x="115" y="287" width="16" height="12" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="137" y="297" font-size="10" fill="#475569">Weights</text>
+  <rect x="200" y="287" width="16" height="12" rx="2" fill="#fce7f3" stroke="#f472b6" stroke-width="1"/>
+  <text x="222" y="297" font-size="10" fill="#475569">Bias</text>
+  <circle cx="275" cy="293" r="6" fill="#818cf8"/>
+  <text x="287" y="297" font-size="10" fill="#475569">Sum + Activation</text>
+  <circle cx="385" cy="293" r="6" fill="#34d399"/>
+  <text x="397" y="297" font-size="10" fill="#475569">Output</text>
+</svg>
