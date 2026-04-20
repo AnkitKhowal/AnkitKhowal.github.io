@@ -8,6 +8,8 @@ You built a RAG chatbot for your company. It works beautifully. Then an intern a
 
 This is the **RBAC-in-RAG** problem, and it's the single biggest reason internal AI projects get quietly shelved. This post breaks down what it is, the main ways to solve it, and the tools that do it out of the box.
 
+![RBAC in RAG: six layers of defence across the pipeline — identity, pre-filter ACL, authz check, prompt guard, output filter, and audit log](/assets/images/rbac-rag-layers.svg)
+
 ---
 
 ## 1. Why RAG Breaks Traditional Access Control
