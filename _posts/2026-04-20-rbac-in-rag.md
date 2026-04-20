@@ -1,8 +1,8 @@
 ---
-
-## layout: post
+layout: post
 title: "RBAC in RAG — How to Stop Your Chatbot from Leaking the CEO's Emails"
 date: 2026-04-20
+---
 
 You built a RAG chatbot for your company. It works beautifully. Then an intern asks it *"what's in the board meeting notes?"* and it cheerfully summarises a document they should never have seen.
 
