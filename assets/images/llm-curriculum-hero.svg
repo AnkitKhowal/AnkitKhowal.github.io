@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="460" viewBox="0 0 880 460" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <linearGradient id="foundationsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="transformersGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="trainingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="ragGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="agentsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="prodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="heroShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="880" height="460" rx="16" fill="url(#heroBg)" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="440" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">The LLM &amp; Gen AI Curriculum</text>
+  <text x="440" y="60" text-anchor="middle" font-size="13" fill="#64748b">From neurons to agents in production &#8212; 11 modules, one path</text>
+
+  <path d="M 70 230 Q 200 140 340 230 T 620 230 T 820 230"
+        fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,5" opacity="0.7"/>
+
+  <g filter="url(#heroShadow)">
+    <circle cx="100" cy="230" r="40" fill="url(#foundationsGrad)"/>
+    <text x="100" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="white">1 &amp; 2</text>
+    <text x="100" y="240" text-anchor="middle" font-size="9" fill="#dbeafe">Neural Nets</text>
+    <text x="100" y="252" text-anchor="middle" font-size="9" fill="#dbeafe">+ Tokens</text>
+  </g>
+  <text x="100" y="300" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">Foundations</text>
+  <text x="100" y="316" text-anchor="middle" font-size="9" fill="#475569">Backprop, loss, scaling,</text>
+  <text x="100" y="328" text-anchor="middle" font-size="9" fill="#475569">embeddings, attention</text>
+
+  <g filter="url(#heroShadow)">
+    <circle cx="230" cy="165" r="40" fill="url(#transformersGrad)"/>
+    <text x="230" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="white">3 &amp; 4</text>
+    <text x="230" y="175" text-anchor="middle" font-size="9" fill="#e0e7ff">Transformer</text>
+    <text x="230" y="187" text-anchor="middle" font-size="9" fill="#e0e7ff">Internals</text>
+  </g>
+  <text x="230" y="120" text-anchor="middle" font-size="11" font-weight="600" fill="#4338ca">Inside the Box</text>
+  <text x="230" y="104" text-anchor="middle" font-size="9" fill="#475569">Q/K/V, multi-head,</text>
+  <text x="230" y="92" text-anchor="middle" font-size="9" fill="#475569">code it from scratch</text>
+
+  <g filter="url(#heroShadow)">
+    <circle cx="370" cy="230" r="40" fill="url(#trainingGrad)"/>
+    <text x="370" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="white">5 &amp; 6</text>
+    <text x="370" y="240" text-anchor="middle" font-size="9" fill="#f3e8ff">Train &amp; Tune</text>
+    <text x="370" y="252" text-anchor="middle" font-size="9" fill="#f3e8ff">at Scale</text>
+  </g>
+  <text x="370" y="300" text-anchor="middle" font-size="11" font-weight="600" fill="#7e22ce">Lifecycle</text>
+  <text x="370" y="316" text-anchor="middle" font-size="9" fill="#475569">Pre/post-training, LoRA,</text>
+  <text x="370" y="328" text-anchor="middle" font-size="9" fill="#475569">quantization, KV cache</text>
+
+  <g filter="url(#heroShadow)">
+    <circle cx="510" cy="165" r="40" fill="url(#ragGrad)"/>
+    <text x="510" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="white">7 &amp; 8</text>
+    <text x="510" y="175" text-anchor="middle" font-size="9" fill="#fce7f3">RAG +</text>
+    <text x="510" y="187" text-anchor="middle" font-size="9" fill="#fce7f3">Safety</text>
+  </g>
+  <text x="510" y="120" text-anchor="middle" font-size="11" font-weight="600" fill="#be185d">Retrieval</text>
+  <text x="510" y="104" text-anchor="middle" font-size="9" fill="#475569">Vector DBs, reranking,</text>
+  <text x="510" y="92" text-anchor="middle" font-size="9" fill="#475569">guardrails, HyDE</text>
+
+  <g filter="url(#heroShadow)">
+    <circle cx="650" cy="230" r="40" fill="url(#agentsGrad)"/>
+    <text x="650" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="white">9 &amp; 10</text>
+    <text x="650" y="240" text-anchor="middle" font-size="9" fill="#ffedd5">Agents +</text>
+    <text x="650" y="252" text-anchor="middle" font-size="9" fill="#ffedd5">MCP</text>
+  </g>
+  <text x="650" y="300" text-anchor="middle" font-size="11" font-weight="600" fill="#c2410c">Action</text>
+  <text x="650" y="316" text-anchor="middle" font-size="9" fill="#475569">ReAct, tool calling,</text>
+  <text x="650" y="328" text-anchor="middle" font-size="9" fill="#475569">memory, multi-agent</text>
+
+  <g filter="url(#heroShadow)">
+    <circle cx="790" cy="165" r="40" fill="url(#prodGrad)"/>
+    <text x="790" y="163" text-anchor="middle" font-size="11" font-weight="700" fill="white">11</text>
+    <text x="790" y="178" text-anchor="middle" font-size="9" fill="#d1fae5">Evals +</text>
+    <text x="790" y="190" text-anchor="middle" font-size="9" fill="#d1fae5">Production</text>
+  </g>
+  <text x="790" y="120" text-anchor="middle" font-size="11" font-weight="600" fill="#047857">Ship It</text>
+  <text x="790" y="104" text-anchor="middle" font-size="9" fill="#475569">LLM-as-judge, tradeoffs,</text>
+  <text x="790" y="92" text-anchor="middle" font-size="9" fill="#475569">fine-tune vs RAG</text>
+
+  <rect x="60" y="370" width="760" height="70" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#heroShadow)"/>
+
+  <circle cx="100" cy="405" r="8" fill="url(#foundationsGrad)"/>
+  <text x="115" y="400" font-size="10" font-weight="600" fill="#1e293b">Theory</text>
+  <text x="115" y="414" font-size="9" fill="#64748b">Modules 1&#8211;4</text>
+
+  <circle cx="250" cy="405" r="8" fill="url(#trainingGrad)"/>
+  <text x="265" y="400" font-size="10" font-weight="600" fill="#1e293b">Models at scale</text>
+  <text x="265" y="414" font-size="9" fill="#64748b">Modules 5&#8211;6</text>
+
+  <circle cx="420" cy="405" r="8" fill="url(#ragGrad)"/>
+  <text x="435" y="400" font-size="10" font-weight="600" fill="#1e293b">Real apps</text>
+  <text x="435" y="414" font-size="9" fill="#64748b">Modules 7&#8211;8</text>
+
+  <circle cx="560" cy="405" r="8" fill="url(#agentsGrad)"/>
+  <text x="575" y="400" font-size="10" font-weight="600" fill="#1e293b">Agents</text>
+  <text x="575" y="414" font-size="9" fill="#64748b">Modules 9&#8211;10</text>
+
+  <circle cx="690" cy="405" r="8" fill="url(#prodGrad)"/>
+  <text x="705" y="400" font-size="10" font-weight="600" fill="#1e293b">Production</text>
+  <text x="705" y="414" font-size="9" fill="#64748b">Module 11</text>
+</svg>
